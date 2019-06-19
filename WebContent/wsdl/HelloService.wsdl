@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service" xmlns:intf="http://service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="createSalesOrder">
+    <complexType>
+     <sequence>
+      <element name="xml" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createSalesOrderResponse">
+    <complexType>
+     <sequence>
+      <element name="createSalesOrderReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="helloWorld">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="helloWorldResponse">
+    <complexType>
+     <sequence>
+      <element name="helloWorldReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="helloWorldRequest">
+
+      <wsdl:part element="impl:helloWorld" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createSalesOrderRequest">
+
+      <wsdl:part element="impl:createSalesOrder" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createSalesOrderResponse">
+
+      <wsdl:part element="impl:createSalesOrderResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="helloWorldResponse">
+
+      <wsdl:part element="impl:helloWorldResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="HelloService">
+
+      <wsdl:operation name="createSalesOrder">
+
+         <wsdl:input message="impl:createSalesOrderRequest" name="createSalesOrderRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createSalesOrderResponse" name="createSalesOrderResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="helloWorld">
+
+         <wsdl:input message="impl:helloWorldRequest" name="helloWorldRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:helloWorldResponse" name="helloWorldResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="HelloServiceSoapBinding" type="impl:HelloService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createSalesOrder">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createSalesOrderRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createSalesOrderResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="helloWorld">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="helloWorldRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="helloWorldResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="HelloServiceService">
+
+      <wsdl:port binding="impl:HelloServiceSoapBinding" name="HelloService">
+
+         <wsdlsoap:address location="http://localhost:8090/HelloWorldWS/services/HelloService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

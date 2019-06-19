@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+        <Key Name="China">
+            <Value Name="TextKey">China</Value>
+            <Value Name="Enabled">true</Value>
+            <Value Name="PhotoIDWidth">38PhotoIDWidth</Value>
+            <Value Name="PhotoIDHeight">38</Value>
+            <Key Name="Adult">
+                <Value Name="CrownPercent">0.10</Value>
+                <Value Name="HeadPercent">0.60AdultHeadPercent</Value>
+            </Key>
+            <Key Name="Child">
+                <Value Name="CrownPercent">0.10</Value>
+                <Value Name="HeadPercent">0.60ChildHeadPercent</Value>
+            </Key>
+        </Key>
+        <Key Name="Australia">
+            <Value Name="TextKey">Australia</Value>
+            <Value Name="Enabled">true</Value>
+            <Value Name="PhotoIDWidth">35PhotoIDWidth</Value>
+            <Value Name="PhotoIDHeight">45</Value>
+            <Key Name="Adult">
+                <Value Name="CrownPercent">0.061</Value>
+                <Value Name="HeadPercent">0.756"Adult"HeadPercent</Value>
+            </Key>
+            <Key Name="Child">
+                <Value Name="CrownPercent">0.072</Value>
+                <Value Name="HeadPercent">0.711ChildHeadPercent</Value>
+            </Key>
+        </Key>
+        <Key Name="Austria">
+            <Value Name="TextKey">Austria</Value>
+            <Value Name="Enabled">true</Value>
+            <Value Name="PhotoIDWidth">35PhotoIDWidth</Value>
+            <Value Name="PhotoIDHeight">45</Value>
+            <Key Name="Adult">
+                <Value Name="CrownPercent">0.064</Value>
+                <Value Name="HeadPercent">0.744AdultHeadPercent</Value>
+            </Key>
+            <Key Name="Child">
+                <Value Name="CrownPercent">0.078</Value>
+                <Value Name="HeadPercent">0.689ChildHeadPercent</Value>
+            </Key>
+        </Key>
+</Configuration>
